@@ -1,0 +1,20 @@
+---
+bot:
+  invokeKey: $!
+  features:
+    update:
+      command: ./vhserver update
+      message_info: 🚧 Mon fils Thor remodèle le monde de Valheim 🚧
+      message_succes: 💚 Thor a terminé et le monde de Valheim est de nouveau accessible 💚
+      help: Te procure le pouvoir de mettre à jour le monde de Valheim 
+    reboot:
+      command: ./vhserver restart
+      message_info: 🚧 Le portail d'Yggdrasil vers Valheim a besoin de recuperer ses forces pendant quelques minutes 🚧
+      message_succes: 💚 Le portail d'Yggdrasil vers Valheim est de nouveau ouvert 💚
+      help: Te donne la possibilitée de clore temporairement le portail d'Yggdrasil vers Valheim 
+    status:
+      command: 
+      help: Te permet de recuperer des informations interressantes... 🚧 EN CONSTRUCTION 🚧
+      message_info: 🚧 N/A 🚧
+      message_succes: 💚 N/A 💚
+
