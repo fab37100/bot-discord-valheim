@@ -1,0 +1,30 @@
+{
+  "name": "bot-discord-valheim",
+  "version": "1.0.0",
+  "description": "Bot discord pour la gestion du serveur Valheim",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fab37100/bot-discord-valheim.git"
+  },
+  "keywords": [
+    "bot",
+    "discord",
+    "valheim"
+  ],
+  "author": "Fabien PETIT",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fab37100/bot-discord-valheim/issues"
+  },
+  "homepage": "https://github.com/fab37100/bot-discord-valheim#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
+    "ssh-exec": "^2.0.0"
+  }
+}

@@ -1,0 +1,4 @@
+/node_modules
+docker-compose.debug.yml
+.env
+package-lock.json
