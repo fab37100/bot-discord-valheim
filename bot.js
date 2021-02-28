@@ -14,8 +14,7 @@ const VALHEIMPWD = process.env.VALHEIMPWD;
 const TOKENDISCORDBOT = process.env.TOKENDISCORDBOT;
 
 // Importation de la configuration
-const configBot = YAML.parse(fs.readFileSync('./config.yml', 'utf8'));
-console.log(configBot);
+const configBot = YAML.parse(fs.readFileSync(`${process.cwd()}/config.yml`, 'utf8'));
 
 const client = new Discord.Client();
 client.login(TOKENDISCORDBOT);
@@ -49,7 +48,6 @@ function execCommand(msg, execConfig, user, ip, pwd) {
 
 client.on('message', msg => {
     if (msg.content.substring(0,configBot.bot.invokeKey.length) == configBot.bot.invokeKey && msg.channel.id === IDDISCORDCHANEL && ! (msg.author.id === CLIENTIDDISCORDBOT)){
-        console.log(msg.content);
         if (msg.content === configBot.bot.invokeKey+'status') {
             execCommand(msg,configBot.bot.features['status'],VALHEIMUSER,VALHEIMIPSERVER,VALHEIMPWD);
         }
@@ -64,7 +62,6 @@ client.on('message', msg => {
             for (const [key,value] of Object.entries(configBot.bot.features)){
                 msg.channel.send(`${configBot.bot.invokeKey}${key}: ${value.help}`);
             }
-            console.log("NOBODY => HELP");
         }
     }
 });
